@@ -1,0 +1,274 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Kumbh Sans", sans-serif;
+  font-optical-sizing: auto;
+  background-color: #1E213F;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header h1 {
+  margin-block: 20px;
+  color: #D7E0FF;
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 55px;
+}
+
+.nav {
+  background-color: #161932;
+  border-radius: 100px;
+  margin-bottom: 45px;
+}
+
+.nav button {
+  background: initial;
+  margin: 8px 10px;
+  color: #D7E0FF;
+  border: none;
+  transition: background-color 0.3s ease-in;
+}
+
+.nav button.selected {
+  background-color: #F87070;
+  padding: 10px 25px;
+  border-radius: 50px;
+  color: #000;
+}
+
+.main {
+  margin-top: 20px;
+  width: 410px;
+  height: 410px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: linear-gradient(#2E325A, #0E112A);
+  box-shadow: 50px 50px 100px 0px #121530;
+  box-shadow: -50px -50px 100px 0px #272C5A;
+  margin-bottom: 60px;
+}
+
+.timerControls {
+  display: flex;
+  flex-direction: column;
+}
+
+.timer {
+  font-size: 100px;
+  color: #D7E0FF;
+  line-height: 124.02px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.settingsBtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 1.9s ease-in-out; 
+}
+
+.settingsBtn:hover {
+  transform: rotate(360deg); 
+}
+
+.mainStarBtn {
+  background: unset;
+  color: #D7E0FF;
+  border: none;
+  line-height: 19.84px;
+  font-size: 16px;
+  letter-spacing: 15px;
+  font-weight: 700;
+  padding: unset;
+  cursor: pointer;
+}
+
+.modal {
+  margin: 0 auto;
+  width: 540px;
+  margin-block: auto;
+  border-radius: 20px;
+  padding: 40px;
+  position: relative;
+  overflow: visible;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  button {
+    background: unset;
+    border: unset;
+    cursor: pointer;
+  }
+}
+
+hr {
+  margin-block: 25px;
+  border: 1px solid #E3E1E1;
+}
+
+.modaltimeTitle {
+  margin-bottom: 22px;
+  font-size: 13px;
+  line-height: 16.12px;
+  letter-spacing: 5px;
+}
+
+.modaltime {
+  display: flex;
+  gap: 20px;
+
+  input {
+    width: 140px;
+    background-color: #EFF1FA;
+    border: initial;
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  p {
+    margin-bottom: 8px;
+  }
+}
+
+.font {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fontBtn {
+  gap: 16px;
+  display: flex;
+
+  button {
+   width: 40px;
+   height: 40px;
+   border-radius: 40px;
+   color: #1E213F;
+   background-color: #EFF1FA;
+   border: none;
+   cursor: pointer;
+  }
+
+  button:first-child {
+    background-color: #161932;
+    color: #FFFFFF;
+  }
+}
+
+.color {
+  display: flex;
+  justify-content: space-between;
+
+  .colorBtn {
+    display: flex;
+    gap: 16px;
+
+    button {
+      width: 40px;
+      height: 40px;
+      border-radius: 40px;
+      border: none;
+    }
+  }
+}
+
+.colorBtn button:first-child {
+  background-color: #F87070;
+}
+
+.colorBtn button:nth-child(2) {
+  background-color: #70F3F8;
+}
+
+.colorBtn button:nth-child(3) {
+  background-color: #D881F8;
+}
+
+.modalApplyBtn {
+  border: none;
+  padding: 21px 47px;
+  border-radius: 100px;
+  background-color: #F87070;
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 19.84px;
+  font-weight: 700;
+  position: absolute; 
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+@media (width <= 375px) {
+  .main {
+    width: 300px;
+    height: 300px;
+  }
+
+  .nav button {
+    margin: 6px;
+  }
+
+  .nav button.selected {
+    padding: 9px;
+  }
+
+  .modal {
+    width: 327px;
+  }
+
+  .modaltime {
+    flex-direction: column;
+  }
+
+  .Item {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .font, .color {
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+  }
+}
